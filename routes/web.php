@@ -19,7 +19,7 @@ use App\Http\Controllers\admin\bookAppointmentAdminCtrl;
 */
 
 Route::get('/', function () {
-    return view('patients.login');
+  return view('patients.login');
 });
 
 // Patients
@@ -35,7 +35,7 @@ Route::post('/patient/loginAction', [patientsController::class, 'loginAction'])-
 Route::get('/admin/login', [adminController::class, 'login'])->name('admin.login');
 Route::post('/admin/loginAction', [adminController::class, 'loginAction'])->name('admin.loginAction');
 
-Route::group(['middleware' => ['isAdmin']], function(){
+Route::group(['middleware' => ['isAdmin']], function () {
 
   Route::get('/admin/dashboard', [adminController::class, 'dasboard'])->name('admin.dasboard');
   Route::get('/admin/Reports', [adminController::class, 'reports'])->name('admin.reports');
@@ -77,17 +77,10 @@ Route::group(['middleware' => ['isAdmin']], function(){
   Route::post('/admin/walkin/getDateTimeScheduled', [bookAppointmentAdminCtrl::class, 'getDateTimeScheduled'])->name('admin.getDateTimeScheduled');
 
   Route::post('/admin/walkin/AppoinmentDateStep', [bookAppointmentAdminCtrl::class, 'AppoinmentDateStep'])->name('admin.AppoinmentDateStep');
-
-
-
-
-
-
 });
 
-Route::group(['middleware' => ['isPatient']], function(){
+Route::group(['middleware' => ['isPatient']], function () {
 
   Route::get('/patient/logout', [patientsController::class, 'logout'])->name('patients.logout');
   Route::get('/patient/dashboard', [patientsController::class, 'dashboard'])->name('patients.dashboard');
-
 });
