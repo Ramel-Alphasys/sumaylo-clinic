@@ -36,7 +36,30 @@
         @yield('content')
       </div>
     </div>
-
+    <div class="modal fade" id="modal-user" style="display: none;" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Personal Information</h4>
+            <a class="nav-link" title="Click to Logout" href="{{ route('patients.logout') }}">
+              <i class="fas fa-sign-out-alt"></i>
+            </a>
+            <button type="button" title="Close" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5>Full Name</h5>
+            <h6 style="text-transform: capitalize;">{{ $userLogged->firstName }} {{ $userLogged->middleName }} {{ $userLogged->lastName }}</h6>
+          </div>
+          <div class="modal-footer justify-content-between">
+            <a href="{{ route('patients.userInfo') }}" class="btn btn-primary">Update Information</a>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
   </div>
 
 

@@ -1,4 +1,3 @@
-
 <!-- Navbar -->
 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
   <!-- Left navbar links -->
@@ -103,11 +102,7 @@
       </div>
     </li>
 
-    <li class="nav-item">
-      <a class="nav-link" href="{{ route('patients.logout') }}">
-        <i class="fas fa-sign-out-alt"></i>
-      </a>
-    </li>
+
   </ul>
 </nav>
 <!-- /.navbar -->

@@ -34,49 +34,11 @@
 
 <body class="login-page">
 
-  <div class="container-fluid">
-    <div class="row col-12">
-      <!-- slider -->
-      <div class="col-6">
-        <section class="carousel" aria-label="Gallery">
-          <ol class="carousel__viewport">
-            <li id="carousel__slide1" tabindex="0" class="carousel__slide">
-              <div class="carousel__snapper d-flex justify-content-center">
-                some content here
-              </div>
-            </li>
-            <li id="carousel__slide2" tabindex="0" class="carousel__slide">
-              <div class="carousel__snapper"></div>
-            </li>
-            <li id="carousel__slide3" tabindex="0" class="carousel__slide">
-              <div class="carousel__snapper"></div>
-            </li>
-            <li id="carousel__slide4" tabindex="0" class="carousel__slide">
-              <div class="carousel__snapper"></div>
-            </li>
-          </ol>
-          <aside class="carousel__navigation">
-            <ol class="carousel__navigation-list">
-              <li class="carousel__navigation-item">
-                <a href="#carousel__slide1" class="carousel__navigation-button">Go to slide 1</a>
-              </li>
-              <li class="carousel__navigation-item">
-                <a href="#carousel__slide2" class="carousel__navigation-button">Go to slide 2</a>
-              </li>
-              <li class="carousel__navigation-item">
-                <a href="#carousel__slide3" class="carousel__navigation-button">Go to slide 3</a>
-              </li>
-              <li class="carousel__navigation-item">
-                <a href="#carousel__slide4" class="carousel__navigation-button">Go to slide 4</a>
-              </li>
-            </ol>
-          </aside>
-        </section>
-      </div>
-      <!-- end slider -->
-      <div class="login-box col-6 d-flex justify-content-center">
-        <div class="col-4">
-          <div class="login-logo" style="margin-top: 50%">
+  <div class="container-fluid" style=" height: 100vh;">
+    <div class="row">
+      <div class="login-box col-12 d-flex justify-content-center" style="margin-top: 25%;">
+        <div class="col-2">
+          <div class="login-logo">
             <a href="../../index2.html"><b>SDC</b>| Patient Login</a>
           </div>
           <!-- /.login-logo -->

@@ -19,8 +19,11 @@ use App\Http\Controllers\admin\bookAppointmentAdminCtrl;
 */
 
 Route::get('/', function () {
-  return view('patients.login');
+  return view('index');
 });
+
+// landing page
+Route::get('/', [patientsController::class, 'landingPage'])->name('index');
 
 // Patients
 Route::get('/patient/register', [patientsController::class, 'register'])->name('patients.register');
@@ -83,4 +86,5 @@ Route::group(['middleware' => ['isPatient']], function () {
 
   Route::get('/patient/logout', [patientsController::class, 'logout'])->name('patients.logout');
   Route::get('/patient/dashboard', [patientsController::class, 'dashboard'])->name('patients.dashboard');
+  Route::get('/patient/user', [patientsController::class, 'userInfo'])->name('patients.userInfo');
 });
