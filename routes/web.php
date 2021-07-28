@@ -24,6 +24,7 @@ Route::get('/', function () {
 
 // landing page
 Route::get('/', [patientsController::class, 'landingPage'])->name('index');
+Route::get('services', 'Controller@landingPage');
 
 // Patients
 Route::get('/patient/register', [patientsController::class, 'register'])->name('patients.register');

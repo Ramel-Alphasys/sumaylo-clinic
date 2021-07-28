@@ -51,6 +51,9 @@
           <div class="modal-body">
             <h5>Full Name</h5>
             <h6 style="text-transform: capitalize;">{{ $userLogged->firstName }} {{ $userLogged->middleName }} {{ $userLogged->lastName }}</h6>
+            <hr />
+            <h5>Email</h5>
+            <h6>{{ $userLogged->email }}</h6>
           </div>
           <div class="modal-footer justify-content-between">
             <a href="{{ route('patients.userInfo') }}" class="btn btn-primary">Update Information</a>

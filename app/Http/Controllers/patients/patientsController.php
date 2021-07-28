@@ -27,7 +27,7 @@ class patientsController extends Controller
   {
     if (session()->has('patientId')) {
       session()->pull('patientId');
-      return redirect('patient/login');
+      return redirect('/');
     }
   }
   public function dashboard()
